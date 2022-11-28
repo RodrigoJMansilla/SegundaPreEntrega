@@ -510,7 +510,7 @@ esto lo digo por que yo estaba conforme con mi estructura, y puedo prescindir de
     grid-area: nosotros1;
     display: flex;
     flex-direction: column;
-    width: 50vw;
+    width: auto;
     justify-content: center;
     padding: 5% 1% 5% 1%;
 }
@@ -532,7 +532,7 @@ esto lo digo por que yo estaba conforme con mi estructura, y puedo prescindir de
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50vw;
+    width: auto;
     padding-top: 30px;
 }
 
