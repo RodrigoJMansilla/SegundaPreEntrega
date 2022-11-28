@@ -1,0 +1,1123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto+Condensed:wght@300;400&family=Roboto:wght@300&display=swap');
+
+/* Asi se comenta en CSS*/
+/*, este es el reseteo*/
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    background-color: #fdffff;
+
+    line-height: normal;
+    /*piso propiedad del CDN de bootstrap no deseada*/
+
+
+}
+
+
+/* ----------- TEXTO ----------- */
+
+/* Etiqueta Anchor*/
+a {
+    text-decoration: none;
+    color: #fffefd;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+/* Este selector define el estilo del enlace cuando se le pasa el mouse por ecnima*/
+a:hover {
+    color: #ade8f4;
+    text-decoration: underline;
+}
+
+
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #53585e;
+    padding: 30px;
+    border-bottom: solid;
+    border-color: #53585e;
+    border-width: 1px;
+    margin: 0 5% 10px 5%;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #53585e;
+    font-size: 1.875rem;
+
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    color: #53585e;
+    font-size: 1, 5625rem;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+    color: #53585e;
+    margin: 0;
+}
+
+
+/* ----------- HEADER ----------- */
+
+
+header {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    grid-area: header;
+
+}
+
+.pHeader {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 7px;
+    margin: 0;
+
+}
+
+/* ----------- NAV BAR ----------- */
+
+nav {
+    background-color: #025bac;
+    /* 2158a7 color viejo */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    top: 0;
+    height: 61px;
+}
+
+.nav1 {
+    grid-area: nav1;
+    position: sticky;
+
+}
+
+.nav2 {
+    grid-area: nav2;
+    position: sticky;
+
+}
+
+
+.hijonav2 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /*elimino prop del cdn de bootstrap */
+
+
+}
+
+.hijonav2 li {
+    list-style-type: none;
+    border-right: solid;
+    border-color: #fffefd;
+    border-width: 0.5px;
+    padding: 2px 2% 2px 2%;
+}
+
+
+
+.hijonav2 .ultimoItem {
+    border-right: none;
+}
+
+
+
+/* ----------- "pre footer" seccion Garantia  ----------- */
+
+.garantia {
+    background-color: #e3e3e3;
+    padding: 0 4% 0 5%;
+    grid-area: garantia;
+}
+
+.garantia--L {
+    grid-area: garantia1;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 0 0 0 5%;
+}
+
+.garantia--C {
+    padding-left: 2%;
+}
+
+.garantia--R {
+    grid-area: garantia2;
+    display: flex;
+    justify-content: center;
+    padding-right: 5%;
+}
+
+.garantia--h2 {
+    color: #002857;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.garantia--p {
+    color: #002857;
+    font-size: 1rem;
+}
+
+
+
+/* ----------- FOOTER ----------- */
+
+
+/* los estilos de <footer> lo llevo a la parte de Media Queries, linea 600 */
+
+.footerL {
+    display: flex;
+    padding-left: 10px;
+}
+
+.footerL__contactoFooter {
+    padding: 2px;
+}
+
+.pFooter {
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    color: #000000;
+}
+
+.footerR {
+    display: flex;
+    align-items: center;
+}
+
+
+/* pequeña animacion para las redes */
+
+.red1 {
+    padding: 5px;
+
+}
+
+.red2 {
+    padding: 5px;
+}
+
+.red3 {
+    padding: 5px;
+}
+
+.red1:hover,
+.red2:hover,
+.red3:hover {
+    animation: tremble 3s;
+    transform: scale(1.2);
+    transition: width heigh 3s;
+
+}
+
+
+@keyframes tremble {
+    12.5% {
+        transform: rotate(-30deg)
+    }
+
+    37.5% {
+        transform: rotate(30deg)
+    }
+
+}
+
+
+
+
+/* ----------- Grilla GENERAL (body) ---------- */
+
+/* La clase de la grilla general se desarrolla en la parte de media queries (linea 598) */
+
+main {
+    padding: 0;
+    grid-area: main;
+}
+
+/* ----------- main INDEX ----------- */
+
+.fondoMainIndex {
+    background-image: url("../images/fondo-lavarropas-ajustado.png");
+    background-repeat: no-repeat;
+    background-color: #e3e3e3;
+    background-size: cover;
+}
+
+
+
+/* la clase .primeraSeccion se desarrolla mas abajo en la seccion de Mqueries */
+
+
+.h1Main {
+    grid-area: title;
+}
+
+.primeraSeccion__div {
+    grid-area: lista;
+    margin-left: 8%;
+}
+
+.primeraSeccion__div__lista {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    align-self: center;
+
+}
+
+.primeraSeccion__div__lista li {
+    list-style-type: circle;
+    border: none;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+.primeraSeccion__div__form {
+    /* background-color: #0077b6; opacity: 1; */
+
+    /* DUDA: POR QUE SI MODIFICO EL OPACITY DEL BACKGROUND COLOR, CUANDO BAJO EL SCROLL Y EL NAV BAR (CON POSITIION STICKY) LLEGA A LA ALTURA DEL "BOTON" ESTE SE SOBREPONE? SI LO DEJO CON OPACITY 1 ESTO NO SUCEDE. */
+
+    border-width: 0.25px;
+    border-radius: 10px;
+    padding: 8px;
+    grid-area: boton;
+    border-color: #53585e;
+    margin: 20px 0 20px 0;
+}
+
+.labelForm {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: #53585e;
+    font-weight: bold;
+    align-self: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.botonForm {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #025bac;
+    border-color: #025bac;
+}
+
+.imgBotonForm {
+    padding-left: 10px;
+}
+
+
+
+/* ----------- CONTACTO HTML ----------- */
+
+
+.mainContacto {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 0 50px 0;
+    margin: 30px 7.5% 30px 7.5%;
+
+}
+
+.seccionContacto--L {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 400px;
+    border: solid;
+    border-color: #53585e;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 50px;
+    background-image: url(../images/telefono-contacto-opacity.png);
+}
+
+.divContacto {
+    display: flex;
+    width: 250px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.textContacto {
+    text-align: center;
+}
+
+
+.seccionContacto--R {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.h3dir {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid;
+    padding: 0 0 2px 0;
+    border-width: 1px;
+    width: 250px;
+    text-align: center;
+}
+
+.gmaps {
+    width: 250px;
+    height: 250px;
+    margin: 10px 0 0 0;
+}
+
+
+/* ----------- REFERENCIAS HTML ----------- */
+
+/* 
+NOTAS:
+En este punto incluí un grid system en una section por que la profesora dijo que era mejor utilizar tanto grid nativo como grid system, y poder corroborar el manejo de ambos para la entrega, lo cual es muy logico en terminos academicos y me vino muy bien para aprender.
+
+Se me ocurrio incluirlo aca para acomodar la seccion con todos los enlaces de las referencias y reseñas de la gente para con el sitio.
+
+La verdad que fue muy engorroso por que el CDN de bootstrap me modifico un monton de propiedades por default de CSS (que en el mio no estaban explicitas) y me desacomodo todo el html.
+
+Para que quede implementado correctamente tuve que rastrear una por una estas modificaciones. 
+
+ME GUSTARIA SABER SI HAY ALGUNA MANERA MENOS ORTODOXA DE COMPLEMENTAR BOOTSTRAP CON UN MAQUETADO DE CSS NATIVO
+
+esto lo digo por que yo estaba conforme con mi estructura, y puedo prescindir de usar un grid system. El problema surge con la necesidad de incorporar componentes.
+*/
+
+.mainReferencias {
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #e3e3e3;
+    margin: 30px 7.5% 30px 7.5%;
+    border-radius: 10px;
+
+}
+
+.refTitle {
+    width: 95%;
+}
+
+.h2Referencias {
+    text-align: center;
+    border-bottom: solid;
+    color: #53585e;
+    padding: 1.5%;
+    border-width: 0.5px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+
+.refContainer {
+    padding-bottom: 30px;
+}
+
+.col {
+    flex: 0 0 0%;
+    /* piso propiedad del CDN de bootstrap no deseada */
+}
+
+
+.anchorImg {
+
+    border-style: solid;
+    border-color: #000000;
+    border-radius: 15px;
+    padding: 0px;
+
+    padding: 0px 0px -1px 0px;
+    border-style: solid;
+    border-width: 0.5px;
+
+}
+
+
+
+.imgReseñas {
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: #000000;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 0px;
+    width: 200px;
+}
+
+
+
+/* ----------- NOSOTROS HTML ----------- */
+
+
+.mainNosotros {
+    margin: 30px 7.5% 30px 7.5%;
+    padding: 0 10px 0 10px;
+
+}
+
+.nosotros {
+    display: grid;
+    grid-template-areas:
+        "taller"
+        "nosotros1"
+        "nosotros2"
+        "lvropa";
+    place-items: center center;
+    width: 100%;
+}
+
+.imgNosotros1 {
+
+    grid-area: taller;
+    border-radius: 10px;
+    width: 73vw;
+}
+
+.nosotros--R {
+    grid-area: nosotros1;
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    justify-content: center;
+    padding: 5% 1% 5% 1%;
+}
+
+
+.h2Nosotros {
+    text-align: center;
+}
+
+.pNosotros {
+    padding: 10px 0 0 0;
+    text-align: center;
+    line-height: 25px;
+}
+
+
+.nosotros2--L {
+    grid-area: nosotros2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50vw;
+    padding-top: 30px;
+}
+
+.mision {
+
+    border-bottom: solid;
+    border-width: 0.5px;
+    border-color: #53585e;
+    padding: 0 0 2.5% 0;
+}
+
+.vision {
+    padding: 2.5% 0 0 0;
+}
+
+
+.imgNosotros2 {
+    grid-area: lvropa;
+    width: 73vw;
+    border-radius: 10px;
+    padding: 8% 0 4% 0;
+}
+
+
+/* ----------- REPARACIONES HTML ----------- */
+
+.mainReparaciones {
+    margin: 30px 7.5% 30px 7.5%;
+    padding: 0 10px 0 10px;
+}
+
+.grid {
+    display: grid;
+    grid-template-areas:
+        "fila1"
+        "reparacion1"
+        "reparacion2"
+        "reparacion3";
+
+    grid-row: 50px 50px 50px 50px;
+    column-gap: 15px;
+    row-gap: 50px;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.fila1 {
+    grid-area: fila1;
+    width: auto;
+}
+
+.reparacion1 {
+    grid-area: reparacion1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: solid;
+    border-width: 0.5px;
+    border-color: #53585e;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    padding-bottom: 15px;
+    overflow: hidden;
+}
+
+.reparacion2 {
+    grid-area: reparacion2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: solid;
+    border-width: 0.5px;
+    border-color: #53585e;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    padding-top: 15px;
+    overflow: hidden;
+}
+
+.reparacion3 {
+    grid-area: reparacion3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: solid;
+    border-width: 0.5px;
+    border-color: #53585e;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    padding-bottom: 15px;
+    overflow: hidden;
+}
+
+.articleReparaciones {
+    width: auto;
+    padding: 15px 0 15px 0;
+}
+
+
+.imagenRep {
+    border-radius: 10px;
+    justify-self: end;
+    width: 200px;
+}
+
+.img1 {
+    transition: all 3s;
+    z-index: -1;
+}
+
+.img2 {
+    transition: all 3s;
+    z-index: -1;
+}
+
+.img3 {
+    transition: all 3s;
+    z-index: -1;
+}
+
+
+.reparacion1:hover .img1 {
+    transform: scale(1.5);
+}
+
+.reparacion2:hover .img2 {
+    transform: scale(1.5);
+}
+
+.reparacion3:hover .img3 {
+    transform: scale(1.5);
+}
+
+
+
+.titleCenterRep {
+    text-align: center;
+    padding-bottom: 4px;
+}
+
+.h2Rep {
+    font-size: 1.5rem;
+}
+
+.pReparaciones {
+    text-align: center;
+    font-size: 15px;
+}
+
+
+
+/* ----------- MEDIA QUERIES -----------  */
+/* El objetivo fue que el sitio sea completamente responsive, en todos sus html a partir de un ancho de ventana de 300px */
+
+
+.gridIndex {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "nav1"
+        "nav2"
+        "main"
+        "garantia1"
+        "garantia2"
+        "footer";
+}
+
+.nav1 {
+    position: sticky;
+}
+
+.nav2 {
+
+    position: sticky;
+    top: 61px;
+}
+
+
+.primeraSeccion {
+    display: grid;
+
+    grid-template:
+        "title"auto "lista"1fr "boton"2fr;
+    place-items: center center;
+
+}
+
+.h1Main {
+    font-size: 1.5rem;
+}
+
+.primeraSeccion__div__lista li {
+    padding-bottom: 2%;
+}
+
+footer {
+    background-color: #025bac;
+    display: flex;
+    flex-flow: column wrap;
+    padding: 0 2% 0 2%;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: footer;
+}
+
+
+/* Acomodo Footer */
+
+@media(min-width:371px) {
+    footer {
+        background-color: #025bac;
+        display: flex;
+        flex-flow: row wrap;
+        height: 65.8px;
+        padding: 0 2% 0 2%;
+        justify-content: space-between;
+        align-items: center;
+        grid-area: footer;
+    }
+
+
+}
+
+
+/* Actualizo un poco los valores del heading y de la lista en el main del index */
+
+@media(min-width:410px) {
+    .h1Main {
+        font-size: 2rem;
+    }
+
+    .primeraSeccion__div__lista {
+        font-size: 20px;
+    }
+
+    .pFooter {
+        font-size: small;
+    }
+
+
+    /* Aumento las imagenes de REFERENCIAS.html*/
+    .imgReseñas {
+        width: 300px;
+    }
+
+    /* Aumento las imagenes y el fontsize de REPARACIONES.HTML */
+    .imagenRep {
+        width: 350px;
+    }
+
+    .pReparaciones {
+        font-size: 17px;
+    }
+
+    .articleReparaciones {
+        width: 30vw;
+    }
+
+    .reparacion1 {
+        padding: 0;
+    }
+
+    .reparacion2 {
+        padding: 0;
+    }
+
+    .reparacion3 {
+        padding: 0;
+    }
+
+
+
+}
+
+
+
+/* Acomodo el preefooter */
+
+@media(min-width:480px) {
+
+    .gridIndex {
+        display: grid;
+        grid-template-areas:
+            "header header header"
+            "nav1 nav1 nav1"
+            "nav2 nav2 nav2"
+            "main main main"
+            "garantia1 garantia1 garantia2"
+            "footer footer footer";
+
+
+    }
+
+    .garantia--R {
+        justify-content: end;
+    }
+
+    /* Pequeño ajuste de font en REPARACIONES.HTML*/
+    .h2Rep {
+        font-size: 1.875rem;
+    }
+
+
+    .fila1 {
+        width: 40vw;
+    }
+
+}
+
+
+/* Manejo el tamaño de la fuente */
+/* Manejo el tamaño de los elementos de contacto.html*/
+/* Manejo el tamaño de las imagenes de referencias.html*/
+
+@media(min-width:500px) {
+
+    /* INDEX */
+
+    .primeraSeccion__div__lista {
+        font-size: 25px;
+    }
+
+    /* CONTACTO.html */
+
+    .divContacto {
+        width: 468.8px;
+    }
+
+    .h3dir {
+        width: 400px;
+    }
+
+    .gmaps {
+        width: 400px;
+        height: 260px;
+    }
+
+    /* RESEFERENCIAS.html */
+
+    .imgReseñas {
+        width: 350px;
+    }
+
+
+}
+
+/* Reduzco el tamaño de la fuente del titulo para que entre mejor (fuera de la media qerie) */
+
+@media(min-width:556px) {
+
+    .h1Main {
+        font-size: 2.5rem;
+    }
+
+}
+
+/* Acomodo el tamaño del titulo de REFERENCIAS.HTML */
+@media(min-width:605px) {
+
+    .h2Referencias {
+        font-size: 1.875rem;
+        ;
+    }
+
+}
+
+
+/*Acomodo las imagenes de NOSOTROS.HTML */
+@media(min-width:650px) {
+    .imgNosotros1 {
+        width: 479px;
+    }
+
+    .imgNosotros2 {
+        width: 407px;
+    }
+
+    /* Acomodo las imagenes y fontsize de REPARACIONES.HTML */
+
+    .imagenRep {
+        width: auto;
+    }
+
+    .pReparaciones {
+        font-size: 1.25rem;
+    }
+
+
+}
+
+
+/* -- Acomodo la navbar entera en una fila (este es el punto justo en el que los enlaces se empiezan a desacomodar con menos ancho)
+Tambien acomodo la lista y el boton del mail en una sola fila -- */
+
+@media(min-width:717px) {
+
+    /* INDEX */
+
+    .gridIndex {
+        display: grid;
+        grid-template-areas:
+            "header header header"
+            "nav1 nav2 nav2"
+            "main main main"
+            "garantia1 garantia1 garantia2"
+            "footer footer footer";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto auto auto;
+
+
+    }
+
+    .nav2 {
+        position: sticky;
+        top: 0px;
+    }
+
+    .primeraSeccion {
+        display: grid;
+
+        grid-template:
+            "title"auto "lista"1fr "boton"2fr;
+        place-items: center center;
+
+    }
+
+    /* CONTACTO.HTML */
+    /* Re ajusto los tamaños del mapa y su titulo */
+
+    .h3dir {
+        width: 650px;
+    }
+
+    .gmaps {
+        width: 650px;
+        height: 378px;
+    }
+
+
+    /* NOSOTROS.HTML */
+    /* Re ajusto tamaños de items hijos de flex */
+
+    .nosotros--R {
+        height: 350px;
+        width: 578px;
+        padding: 1%;
+    }
+
+    .nosotros2--L {
+        height: 300px;
+        width: 559px;
+        padding: 1%;
+    }
+
+}
+
+/* Le agrego un margin al main por que queda mas acorde al resto de la web, cuando se tiene mas ancho disponible */
+
+@media(min-width:803px) {
+
+    .primeraSeccion {
+        display: grid;
+
+        /* grid-template:
+        "title title" auto
+        "lista boton" 2fr  / 1fr 2fr; */
+
+        grid-template:
+            "title"auto "lista"auto "boton"auto;
+
+        place-items: center center;
+        gap: 10px 15px;
+
+
+
+        margin: 0 15% 0 15%;
+
+    }
+
+}
+
+/* En REFERENCIAS.html incluyo una imagen de fondo */
+
+@media(min-width: 900px) {
+    .mainReferencias {
+        background-image: url(../images/fondo-reseñas-opacity-3.png);
+        background-size: cover;
+    }
+}
+
+
+
+/* Acomodo REPARACIONES.HTML en filas */
+@media(min-width: 950px) {
+
+    .fila1 {
+        grid-area: fila1;
+        width: 40vw;
+    }
+
+    .reparacion1 {
+        grid-area: reparacion1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        border: solid;
+        border-width: 0.5px;
+        border-color: #53585e;
+        border-radius: 10px;
+        width: 80vw;
+    }
+
+    .reparacion2 {
+        grid-area: reparacion2;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        border: solid;
+        border-width: 0.5px;
+        border-color: #53585e;
+        border-radius: 10px;
+        width: 80vw;
+    }
+
+    .reparacion3 {
+        grid-area: reparacion3;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        border: solid;
+        border-width: 0.5px;
+        border-color: #53585e;
+        border-radius: 10px;
+        width: 80vw;
+    }
+
+    .articleReparaciones {
+        width: 30vw;
+        padding: 0 2vw 0 2vw;
+    }
+
+    .divRep {
+        height: 300px;
+    }
+
+    .imagenRep {
+        border-radius: 10px;
+        /*grid-area: imagenRep;*/
+        justify-self: end;
+    }
+
+}
+
+
+/* En REFERENCIAS.html agrando las imagenes */
+@media(min-width:1225px) {
+    .imgReseñas {
+        width: 475px;
+    }
+}
+
+
+/* acomodo en CONTACTO.htl los items en una fila, al tener todo el ancho disponible */
+
+@media(min-width:1400px) {
+    .mainContacto {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    /* En NOSOTROS.HTML acomodo la grilla en 2 v 2 */
+
+    .nosotros {
+        grid-template-areas:
+            "taller nosotros1"
+            "nosotros2 lvropa";
+    }
+
+}
