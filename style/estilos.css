@@ -305,6 +305,7 @@ main {
     grid-area: boton;
     border-color: #53585e;
     margin: 20px 0 20px 0;
+    width: 85vw;
 }
 
 .labelForm {
@@ -1001,21 +1002,18 @@ Tambien acomodo la lista y el boton del mail en una sola fila -- */
 
     .primeraSeccion {
         display: grid;
-
-        /* grid-template:
-        "title title" auto
-        "lista boton" 2fr  / 1fr 2fr; */
-
         grid-template:
-            "title"auto "lista"auto "boton"auto;
-
+            "title" auto
+            "lista" auto
+            "boton" auto;
         place-items: center center;
         gap: 10px 15px;
-
-
-
         margin: 0 15% 0 15%;
+    }
 
+    /* Ajusto el formulario en el INDEX.HTML */
+    .primeraSeccion__div__form {
+        width: 100%;
     }
 
 }
