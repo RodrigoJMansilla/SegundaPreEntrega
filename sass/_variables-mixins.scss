@@ -1,7 +1,6 @@
 /* COLORES */
 
 $AzulDrean: #025bac;
-/*$AzulDrean: green;*/
 $GrisFuente: #53585e;
 $GrisGarantia: #e3e3e3;
 $AzulGarantia: #002857;
@@ -9,6 +8,7 @@ $AzulGarantia: #002857;
 /* Redondeo Imagenes */
 $Redondeo: 10px; /* Practicamente lo dejo por lo academico, para aplicar una operacion *2 en el html de nosotros */
 
+/* Utilizo un mixin para combinar varias lineas que utilizo mucho cuando defino un contenedor flexbox */
 @mixin flexbox ($display, $direction, $justify, $align){
 	display: $display;
     flex-direction: $direction;

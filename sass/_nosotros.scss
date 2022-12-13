@@ -16,12 +16,22 @@
         "lvropa";
     place-items: center center;
     width: 100%;
+
+    @media(min-width:1400px) {
+        grid-template-areas:
+            "taller nosotros1"
+            "nosotros2 lvropa";
+    }
 }
 
 .imgNosotros1 {
     grid-area: taller;
     border-radius: $Redondeo*2;
     width: 73vw;
+
+    @media(min-width:650px) {
+        width: 479px;
+    }
 }
 
 .nosotros--R {
@@ -29,6 +39,13 @@
     grid-area: nosotros1;
     width: auto;
     padding: 5% 1% 5% 1%;
+
+    @media(min-width:717px) {
+        height: 350px;
+        width: 578px;
+        padding: 1%;
+    }
+    
 }
 
 
@@ -48,12 +65,16 @@
     grid-area: nosotros2;
     width: auto;
     padding-top: 30px;
+
+    @media(min-width:717px) {
+        height: 300px;
+        width: 559px;
+        padding: 1%;
+    }
 }
 
 .mision {
     border-bottom: 0.5px solid $GrisFuente;
-    /* border-width: 0.5px;
-    border-color: $GrisFuente; */
     padding: 0 0 2.5% 0;
 }
 
@@ -67,4 +88,8 @@
     width: 73vw;
     border-radius: $Redondeo*2;
     padding: 8% 0 4% 0;
+
+    @media(min-width:650px) {
+        width: 407px;
+    }
 }
