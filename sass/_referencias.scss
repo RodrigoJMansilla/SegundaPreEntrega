@@ -1,0 +1,65 @@
+/* ----------- REFERENCIAS HTML ----------- */
+
+/* 
+NOTAS:
+En este punto incluí un grid system en una section por que la profesora dijo que era mejor utilizar tanto grid nativo como grid system, y poder corroborar el manejo de ambos para la entrega, lo cual es muy logico en terminos academicos y me vino muy bien para aprender.
+
+Se me ocurrio incluirlo aca para acomodar la seccion con todos los enlaces de las referencias y reseñas de la gente para con el sitio.
+
+La verdad que fue muy engorroso por que el CDN de bootstrap me modifico un monton de propiedades por default de CSS (que en el mio no estaban explicitas) y me desacomodo todo el html.
+
+Para que quede implementado correctamente tuve que rastrear una por una estas modificaciones. 
+
+ME GUSTARIA SABER SI HAY ALGUNA MANERA MENOS ORTODOXA DE COMPLEMENTAR BOOTSTRAP CON UN MAQUETADO DE CSS NATIVO
+
+esto lo digo por que yo estaba conforme con mi estructura, y puedo prescindir de usar un grid system. El problema surge con la necesidad de incorporar componentes.
+*/
+
+.mainReferencias {
+    @include flexbox(flex, column, center, center);
+    flex-wrap: wrap;
+    background-color: $GrisGarantia;
+    margin: 30px 7.5% 30px 7.5%;
+    border-radius: 10px;
+
+}
+
+.refTitle {
+    width: 95%;
+}
+
+.h2Referencias {
+    text-align: center;
+    border-bottom: 0.5px solid $GrisFuente;
+    color: $GrisFuente;
+    padding: 1.5%;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+
+.refContainer {
+    padding-bottom: 30px;
+}
+
+.col {
+    flex: 0 0 0%;
+    /* piso propiedad del CDN de bootstrap no deseada */
+}
+
+
+.anchorImg {
+    border: 0.5px solid black;
+    border-radius: 15px;
+    padding: 0px 0px -1px 0px;
+}
+
+
+
+.imgReseñas {
+    @extend .anchorImg;
+    margin: 10px;
+    padding: 0px;
+    width: 200px;
+}
+

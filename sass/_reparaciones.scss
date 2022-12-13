@@ -1,0 +1,121 @@
+
+/* ----------- REPARACIONES HTML ----------- */
+
+.mainReparaciones {
+    margin: 30px 7.5% 30px 7.5%;
+    padding: 0 10px 0 10px;
+}
+
+.grid {
+    display: grid;
+    grid-template-areas:
+        "fila1"
+        "reparacion1"
+        "reparacion2"
+        "reparacion3";
+
+    grid-row: 50px 50px 50px 50px;
+    column-gap: 15px;
+    row-gap: 50px;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.fila1 {
+    grid-area: fila1;
+    width: auto;
+}
+
+.reparacion1 {
+    @include flexbox(flex, column, space-between, center);
+    grid-area: reparacion1;
+    border: 0.5px solid $GrisFuente;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    padding-bottom: 15px;
+    overflow: hidden;
+
+    &:hover{ 
+        .img1{
+            transform: scale(1.5);
+        }
+    }
+}
+
+.reparacion2 {
+    @include flexbox(flex, column, space-between, center);
+    grid-area: reparacion2;
+    border: 0.5px solid $GrisFuente;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    padding-top: 15px;
+    overflow: hidden;
+
+    &:hover{
+        .img2{
+            transform: scale(1.5);
+        }
+    }
+}
+
+.reparacion3 {
+    @include flexbox(flex, column, space-between, center);
+    grid-area: reparacion3;
+    border: 0.5px solid $GrisFuente;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    padding-bottom: 15px;
+    overflow: hidden;
+
+    &:hover{
+        .img3{
+            transform: scale(1.5);
+        }
+    }
+}
+
+.articleReparaciones {
+    width: auto;
+    padding: 15px 0 15px 0;
+}
+
+
+.imagenRep {
+    border-radius: 10px;
+    justify-self: end;
+    width: 200px;
+}
+
+.img1 {
+    transition: all 3s;
+    z-index: -1;
+}
+
+.img2 {
+    transition: all 3s;
+    z-index: -1;
+}
+
+.img3 {
+    transition: all 3s;
+    z-index: -1;
+}
+
+
+.titleCenterRep {
+    text-align: center;
+    padding-bottom: 4px;
+}
+
+.h2Rep {
+    font-size: 1.5rem;
+}
+
+.pReparaciones {
+    text-align: center;
+    font-size: 15px;
+}

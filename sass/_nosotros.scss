@@ -1,0 +1,70 @@
+/* ----------- NOSOTROS HTML ----------- */
+
+
+.mainNosotros {
+    margin: 30px 7.5% 30px 7.5%;
+    padding: 0 10px 0 10px;
+
+}
+
+.nosotros {
+    display: grid;
+    grid-template-areas:
+        "taller"
+        "nosotros1"
+        "nosotros2"
+        "lvropa";
+    place-items: center center;
+    width: 100%;
+}
+
+.imgNosotros1 {
+    grid-area: taller;
+    border-radius: $Redondeo*2;
+    width: 73vw;
+}
+
+.nosotros--R {
+    @include flexbox(flex, column, center, normal);
+    grid-area: nosotros1;
+    width: auto;
+    padding: 5% 1% 5% 1%;
+}
+
+
+.h2Nosotros {
+    text-align: center;
+}
+
+.pNosotros {
+    padding: 10px 0 0 0;
+    text-align: center;
+    line-height: 25px;
+}
+
+
+.nosotros2--L {
+    @include flexbox(flex, column, center, normal);
+    grid-area: nosotros2;
+    width: auto;
+    padding-top: 30px;
+}
+
+.mision {
+    border-bottom: 0.5px solid $GrisFuente;
+    /* border-width: 0.5px;
+    border-color: $GrisFuente; */
+    padding: 0 0 2.5% 0;
+}
+
+.vision {
+    padding: 2.5% 0 0 0;
+}
+
+
+.imgNosotros2 {
+    grid-area: lvropa;
+    width: 73vw;
+    border-radius: $Redondeo*2;
+    padding: 8% 0 4% 0;
+}

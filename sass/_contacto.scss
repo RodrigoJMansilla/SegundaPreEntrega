@@ -1,0 +1,51 @@
+/* ----------- CONTACTO HTML ----------- */
+
+
+.mainContacto {
+    @include flexbox(flex, column, space-around, center);
+    padding: 50px 0 50px 0;
+    margin: 30px 7.5% 30px 7.5%;
+
+}
+
+.seccionContacto--L {
+
+    @include flexbox(flex, column, space-around, center);
+    height: 400px;
+    border: solid;
+    border-color: $GrisFuente;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 50px;
+    background-image: url(../images/telefono-contacto-opacity.png);
+}
+
+.divContacto {
+    @include flexbox(flex, column, normal, center);
+    width: 250px;
+}
+
+.textContacto {
+    text-align: center;
+}
+
+
+.seccionContacto--R {
+    @include flexbox(flex, column, normal, center);
+
+}
+
+.h3dir {
+    @include flexbox(flex, row, center, center);
+    border-bottom: solid;
+    padding: 0 0 2px 0;
+    border-width: 1px;
+    width: 250px;
+    text-align: center;
+}
+
+.gmaps {
+    width: 250px;
+    height: 250px;
+    margin: 10px 0 0 0;
+}
