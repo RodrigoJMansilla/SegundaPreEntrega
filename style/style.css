@@ -706,7 +706,7 @@ footer {
 .pFooter {
   font-family: "Roboto", sans-serif;
   font-size: 11px;
-  color: #000000;
+  color: #fffefd;
 }
 @media (min-width: 410px) {
   .pFooter {
