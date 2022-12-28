@@ -131,8 +131,11 @@
     padding-bottom: 4px;
 }
 
-.h2Rep {
+.h1Rep {
     font-size: 1.5rem;
+    border: none;
+    padding: 0 0 4px 0;
+    margin: 0;
 
     @media(min-width:480px) {
         font-size: 1.875rem;

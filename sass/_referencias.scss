@@ -22,13 +22,14 @@ En este punto incluí un grid system en una section con fines academicos, para a
     width: 95%;
 }
 
-.h2Referencias {
+.h1Referencias {
     text-align: center;
     border-bottom: 0.5px solid $GrisFuente;
     color: $GrisFuente;
     padding: 1.5%;
     font-size: 1.3rem;
     font-weight: bold;
+    margin: 0 0 8px 0;
 
     @media(min-width:605px) {
         font-size: 1.875rem;
