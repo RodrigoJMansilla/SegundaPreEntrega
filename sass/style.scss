@@ -99,12 +99,26 @@ header {
 
 /* ----------- NAV BAR ----------- */
 
-nav {
+/*  Utilice 3 nav bar:
+    - Las 2 primeras son programadas en css puro. Estan divididas en dos, una corresponde al logo y la otra a la lista de los enlaces.
+    - Esto fue hecho asi por que en un principio se ubicaban, segun la grilla principal, una al lado de la otra cuando habia espacio disponible, y sino se ubicaban una encima de la otra (anchos menores).
+    - La 3er nav es la implementada con bootstrap.
+    - El funcionamiento final es alternar la visibilidad de las dos primeras con la de la tercera segun el ancho disponible. Las dos primeras terminan funcionando como una cuando el ancho disponible es suficiente para que se ubiquen en la misma fila de la grilla principal. Cuando no hay suficiente espacio, se ocultan y se muestra la 3era navbar con el menu hamburguesa.
+*/
+
+.navg {
     background-color: $AzulDrean;
-    @include flexbox(flex, row, space-around, normal);
+    display: none;
+    
+
+
+    @media(min-width:992px) {
+        @include flexbox(flex, row, space-around, normal);
     flex-wrap: wrap;
     top: 0;
     height: 61px;
+    }
+
 }
 
 .nav1 {
@@ -122,6 +136,7 @@ nav {
         top: 0px;
     }
 }
+
 
 
 .hijonav2 {
@@ -143,6 +158,44 @@ nav {
     }
 
 }
+
+/* Barra de bootstrap */
+
+.nav3 {
+    grid-area: nav3;
+    background-color: $AzulDrean !important; 
+    position: sticky;
+    top: 0px; //sin esta linea no funciona el sticky no se por que.
+    // height: 61px;
+    padding: 0px;
+    /* 992px ultimo pixel antes hamb */
+    @media(min-width:992px) {
+        display: none;
+    }
+}
+
+
+
+.reseta{
+    padding: 0 0 0 7.2%;
+    margin: 0px;
+}
+
+.borde1st{
+    border-top: solid 0.25px #fdffff;
+}
+.colora{
+    color:#fdffff !important;
+    text-align: center;
+    border-bottom: solid 0.25px #fdffff;
+}
+
+.borderLast{
+    border-bottom:none;
+    padding-bottom: 10px;
+}
+
+
 
 /* ----------- "pre footer" seccion Garantia  ----------- */
 
@@ -278,8 +331,7 @@ main {
     display: grid;
     grid-template-areas:
         "header"
-        "nav1"
-        "nav2"
+        "nav3"
         "main"
         "garantia1"
         "garantia2"
@@ -290,8 +342,7 @@ main {
     @media(min-width:480px) {
         grid-template-areas:
             "header header header"
-            "nav1 nav1 nav1"
-            "nav2 nav2 nav2"
+            "nav3 nav3 nav3"
             "main main main"
             "garantia1 garantia1 garantia2"
             "footer footer footer";
@@ -302,13 +353,27 @@ main {
     @media(min-width:717px) {
         grid-template-areas:
             "header header header"
+            "nav3 nav3 nav3"
+            "main main main"
+            "garantia1 garantia1 garantia2"
+            "footer footer footer";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows:  auto auto auto auto auto;
+    }
+
+    /* cambio la nav bar a la original*/
+
+    @media(min-width:992px) {
+        grid-template-areas:
+            "header header header"
             "nav1 nav2 nav2"
             "main main main"
             "garantia1 garantia1 garantia2"
             "footer footer footer";
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto auto auto auto auto;
+        grid-template-rows:  auto auto auto auto auto;
     }
+
 }
 
 

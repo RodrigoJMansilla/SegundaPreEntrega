@@ -604,15 +604,26 @@ header {
 }
 
 /* ----------- NAV BAR ----------- */
-nav {
+/*  Utilice 3 nav bar:
+    - Las 2 primeras son programadas en css puro. Estan divididas en dos, una corresponde al logo y la otra a la lista de los enlaces.
+    - Esto fue hecho asi por que en un principio se ubicaban, segun la grilla principal, una al lado de la otra cuando habia espacio disponible, y sino se ubicaban una encima de la otra (anchos menores).
+    - La 3er nav es la implementada con bootstrap.
+    - El funcionamiento final es alternar la visibilidad de las dos primeras con la de la tercera segun el ancho disponible. Las dos primeras terminan funcionando como una cuando el ancho disponible es suficiente para que se ubiquen en la misma fila de la grilla principal. Cuando no hay suficiente espacio, se ocultan y se muestra la 3era navbar con el menu hamburguesa.
+*/
+.navg {
   background-color: #025bac;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: normal;
-  flex-wrap: wrap;
-  top: 0;
-  height: 61px;
+  display: none;
+}
+@media (min-width: 992px) {
+  .navg {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: normal;
+    flex-wrap: wrap;
+    top: 0;
+    height: 61px;
+  }
 }
 
 .nav1 {
@@ -651,6 +662,42 @@ nav {
 }
 .hijonav2 .ultimoItem {
   border-right: none;
+}
+
+/* Barra de bootstrap */
+.nav3 {
+  grid-area: nav3;
+  background-color: #025bac !important;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  padding: 0px;
+  /* 992px ultimo pixel antes hamb */
+}
+@media (min-width: 992px) {
+  .nav3 {
+    display: none;
+  }
+}
+
+.reseta {
+  padding: 0 0 0 7.2%;
+  margin: 0px;
+}
+
+.borde1st {
+  border-top: solid 0.25px #fdffff;
+}
+
+.colora {
+  color: #fdffff !important;
+  text-align: center;
+  border-bottom: solid 0.25px #fdffff;
+}
+
+.borderLast {
+  border-bottom: none;
+  padding-bottom: 10px;
 }
 
 /* ----------- "pre footer" seccion Garantia  ----------- */
@@ -782,16 +829,24 @@ main {
 
 .gridIndex {
   display: grid;
-  grid-template-areas: "header" "nav1" "nav2" "main" "garantia1" "garantia2" "footer";
+  grid-template-areas: "header" "nav3" "main" "garantia1" "garantia2" "footer";
   /* Acomodo el preefooter */
   /* Acomodo la NavBar en una fila */
+  /* cambio la nav bar a la original*/
 }
 @media (min-width: 480px) {
   .gridIndex {
-    grid-template-areas: "header header header" "nav1 nav1 nav1" "nav2 nav2 nav2" "main main main" "garantia1 garantia1 garantia2" "footer footer footer";
+    grid-template-areas: "header header header" "nav3 nav3 nav3" "main main main" "garantia1 garantia1 garantia2" "footer footer footer";
   }
 }
 @media (min-width: 717px) {
+  .gridIndex {
+    grid-template-areas: "header header header" "nav3 nav3 nav3" "main main main" "garantia1 garantia1 garantia2" "footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+  }
+}
+@media (min-width: 992px) {
   .gridIndex {
     grid-template-areas: "header header header" "nav1 nav2 nav2" "main main main" "garantia1 garantia1 garantia2" "footer footer footer";
     grid-template-columns: 1fr 1fr 1fr;
