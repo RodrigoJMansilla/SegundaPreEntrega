@@ -73,7 +73,8 @@
 .primeraSeccion__div__form {
 
 
-    border: solid 0.25px $GrisFuente;
+    border: none 0.25px $GrisFuente;
+    background-color: $AzulDreanOP;
     border-radius: 20px;
     padding: 25px;
     grid-area: boton;

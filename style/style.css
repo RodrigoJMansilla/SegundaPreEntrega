@@ -65,7 +65,8 @@
 }
 
 .primeraSeccion__div__form {
-  border: solid 0.25px #53585e;
+  border: none 0.25px #53585e;
+  background-color: rgba(2, 90, 172, 0.1294117647);
   border-radius: 20px;
   padding: 25px;
   grid-area: boton;
