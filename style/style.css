@@ -28,7 +28,32 @@
 
 .h1Main {
   grid-area: title;
-  font-size: 1.5rem;
+  font-size: 1.65rem;
+}
+@media (min-width: 419px) {
+  .h1Main {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 438px) {
+  .h1Main {
+    font-size: 1.9rem;
+  }
+}
+@media (min-width: 458px) {
+  .h1Main {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 477px) {
+  .h1Main {
+    font-size: 2.1rem;
+  }
+}
+@media (min-width: 498px) {
+  .h1Main {
+    font-size: 2.2rem;
+  }
 }
 @media (min-width: 556px) {
   .h1Main {
@@ -43,7 +68,7 @@
 
 .primeraSeccion__div__lista {
   font-family: "Roboto", sans-serif;
-  font-size: 15px;
+  font-size: 1.05rem;
   align-self: center;
 }
 .primeraSeccion__div__lista li {
@@ -53,14 +78,29 @@
   line-height: 1.5;
   padding-bottom: 2%;
 }
+@media (min-width: 350px) {
+  .primeraSeccion__div__lista {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 350px) {
+  .primeraSeccion__div__lista {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 380px) {
+  .primeraSeccion__div__lista {
+    font-size: 1.3rem;
+  }
+}
 @media (min-width: 410px) {
   .primeraSeccion__div__lista {
-    font-size: 20px;
+    font-size: 1.4rem;
   }
 }
 @media (min-width: 500px) {
   .primeraSeccion__div__lista {
-    font-size: 25px;
+    font-size: 1.5625rem;
   }
 }
 
@@ -629,13 +669,11 @@ header {
 
 .nav1 {
   grid-area: nav1;
-  position: -webkit-sticky;
   position: sticky;
 }
 
 .nav2 {
   grid-area: nav2;
-  position: -webkit-sticky;
   position: sticky;
   top: 61px;
 }
@@ -669,7 +707,6 @@ header {
 .nav3 {
   grid-area: nav3;
   background-color: #025bac !important;
-  position: -webkit-sticky;
   position: sticky;
   top: 0px;
   padding: 0px;
@@ -799,19 +836,9 @@ footer {
   padding: 5px;
 }
 .red1:hover, .red3:hover, .red2:hover {
-  -webkit-animation: tremble 3s;
-          animation: tremble 3s;
+  animation: tremble 3s;
   transform: scale(1.2);
   transition: width heigh 3s;
-}
-
-@-webkit-keyframes tremble {
-  12.5% {
-    transform: rotate(-30deg);
-  }
-  37.5% {
-    transform: rotate(30deg);
-  }
 }
 
 @keyframes tremble {
